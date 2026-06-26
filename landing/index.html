@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bolivia360</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="app-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">🇧🇴</div>
+        <div>
+          <h2>Bolivia360</h2>
+          <p>Tu día, en tiempo real</p>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <button class="menu-item active" onclick="showSection('mi-dia')">☀️ Mi Día</button>
+        <button class="menu-item" onclick="showSection('reportar')">📍 Reportar</button>
+        <button class="menu-item" onclick="showSection('bolivia')">🇧🇴 Bolivia en Vivo</button>
+        <button class="menu-item" onclick="showSection('copiloto')">🤖 Copiloto IA</button>
+      </nav>
+
+      <div class="sidebar-card">
+        <p class="small-label">Estado de ciudad</p>
+        <h3>La Paz</h3>
+        <span class="status green">Estable</span>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main-content">
+
+      <!-- Header -->
+      <header class="topbar">
+        <div>
+          <p class="date">Viernes, 26 de junio</p>
+          <h1>Buenos días, Natalia</h1>
+        </div>
+
+        <div class="user-box">
+          <span>🔔</span>
+          <div class="avatar">N</div>
+        </div>
+      </header>
+
+      <!-- MI DIA -->
+      <section id="mi-dia" class="content-section active-section">
+        <div class="grid-layout">
+
+          <div class="main-card large">
+            <div class="card-header">
+              <div>
+                <p class="small-label">Resumen IA</p>
+                <h2>Tu día actualizado</h2>
+              </div>
+              <span class="pill">Actualizado hace 2 min</span>
+            </div>
+
+            <div class="ai-message">
+              Hay un bloqueo reportado cerca de Obrajes. Te conviene salir 20 minutos antes para llegar a tu clase.
+            </div>
+
+            <div class="checklist">
+              <h3>Checklist de hoy</h3>
+
+              <label>
+                <input type="checkbox" />
+                <span>Clase en la universidad — 08:00</span>
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                <span>Pagar internet — Hoy</span>
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                <span>Gimnasio — 18:00</span>
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                <span>Revisar tarea del grupo — 20:00</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="main-card">
+            <p class="small-label">Alertas relevantes</p>
+
+            <div class="alert-card red">
+              <strong>🚧 Bloqueo en Obrajes</strong>
+              <p>Reportado 6 veces · Confianza 92%</p>
+            </div>
+
+            <div class="alert-card yellow">
+              <strong>🏛 Fila en SEGIP Sopocachi</strong>
+              <p>Reportado 4 veces · Confianza 84%</p>
+            </div>
+
+            <div class="alert-card blue">
+              <strong>🌧 Lluvia en la tarde</strong>
+              <p>Recomendación: llevar paraguas</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- REPORTAR -->
+      <section id="reportar" class="content-section">
+        <div class="main-card form-card">
+          <p class="small-label">Reporte ciudadano</p>
+          <h2>Reportar situación</h2>
+
+          <div class="form-grid">
+            <div>
+              <label>Tipo de reporte</label>
+              <select>
+                <option>Bloqueo</option>
+                <option>Fila en trámite</option>
+                <option>Gasolina</option>
+                <option>Transporte</option>
+                <option>Corte de agua/luz</option>
+                <option>Colegio/Universidad</option>
+                <option>Seguridad</option>
+              </select>
+            </div>
+
+            <div>
+              <label>Ubicación</label>
+              <input type="text" placeholder="Ej. Obrajes, La Paz" />
+            </div>
+          </div>
+
+          <label>Descripción</label>
+          <textarea placeholder="Ej. Hay bloqueo en Obrajes, los autos no están pasando..."></textarea>
+
+          <button class="primary-button">Analizar con IA</button>
+
+          <div class="classification-box">
+            <h3>Clasificación IA</h3>
+
+            <div class="metrics">
+              <div>
+                <span>Tipo</span>
+                <strong>Bloqueo</strong>
+              </div>
+
+              <div>
+                <span>Gravedad</span>
+                <strong>Alta</strong>
+              </div>
+
+              <div>
+                <span>Confianza</span>
+                <strong>92%</strong>
+              </div>
+
+              <div>
+                <span>Reportado</span>
+                <strong>6 veces</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOLIVIA EN VIVO -->
+      <section id="bolivia" class="content-section">
+        <div class="grid-layout">
+          <div class="main-card large">
+            <div class="card-header">
+              <div>
+                <p class="small-label">Mapa ciudadano</p>
+                <h2>Bolivia en Vivo</h2>
+              </div>
+              <span class="pill">24 reportes activos</span>
+            </div>
+
+            <div class="map-placeholder">
+              <div class="map-dot dot-1">🚧</div>
+              <div class="map-dot dot-2">⛽</div>
+              <div class="map-dot dot-3">🏛</div>
+              <div class="map-dot dot-4">🚍</div>
+              <p>Mapa de reportes en tiempo real</p>
+            </div>
+          </div>
+
+          <div class="main-card">
+            <p class="small-label">Reportes recientes</p>
+
+            <div class="live-item">
+              <strong>🚧 Bloqueo en Obrajes</strong>
+              <p>6 reportes · Confianza 92%</p>
+            </div>
+
+            <div class="live-item">
+              <strong>⛽ Fila de gasolina en Miraflores</strong>
+              <p>3 reportes · Confianza 78%</p>
+            </div>
+
+            <div class="live-item">
+              <strong>🏛 SEGIP Sopocachi con fila alta</strong>
+              <p>4 reportes · Confianza 84%</p>
+            </div>
+
+            <div class="live-item">
+              <strong>🚍 Demora en transporte hacia Calacoto</strong>
+              <p>2 reportes · Confianza 70%</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COPILOTO -->
+      <section id="copiloto" class="content-section">
+        <div class="main-card chat-card">
+          <p class="small-label">Copiloto IA</p>
+          <h2>Edita tu día hablando con la IA</h2>
+
+          <div class="chat-window">
+            <div class="message bot">
+              Hola, puedo ayudarte a organizar tu día según tus tareas y los reportes ciudadanos.
+            </div>
+
+            <div class="message user">
+              Tengo que ir al banco urgente hoy.
+            </div>
+
+            <div class="message bot">
+              Listo. Agregué “Ir al banco” a tu checklist y te recomiendo ir después de las 14:30 porque hay menos reportes de fila.
+            </div>
+          </div>
+
+          <div class="chat-input">
+            <input type="text" placeholder="Escribe algo como: No podré ir al gimnasio hoy..." />
+            <button>Enviar</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

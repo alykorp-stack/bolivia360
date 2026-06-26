@@ -1,0 +1,8 @@
+streamlit>=1.35.0
+python-dotenv>=1.0.0
+google-genai
+pandas
+folium
+streamlit-folium
+pillow
+firebase-admin
