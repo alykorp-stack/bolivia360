@@ -9,26 +9,10 @@ st.set_page_config(
 
 init_state()
 
-st.sidebar.title("🇧🇴 Bolivia360")
-st.sidebar.caption("La IA que vuelve Bolivia más predecible.")
-
-page = st.sidebar.radio(
-    "Menú",
-    ["Mi Día", "Reportar", "Bolivia en Vivo", "Copiloto IA"]
-)
-
-if page == "Mi Día":
-    from app.pages.mi_dia import show
-    show()
-
-elif page == "Reportar":
-    from app.pages.reportar import show
-    show()
-
-elif page == "Bolivia en Vivo":
-    from app.pages.bolivia_en_vivo import show
-    show()
-
-elif page == "Copiloto IA":
-    from app.pages.copiloto_ia import show
-    show()
+pg = st.navigation([
+    st.Page("app/pages/mi_dia.py",          title="Mi Día",          icon="☀️"),
+    st.Page("app/pages/reportar.py",         title="Reportar",        icon="📍"),
+    st.Page("app/pages/bolivia_en_vivo.py",  title="Bolivia en Vivo", icon="🇧🇴"),
+    st.Page("app/pages/copiloto_ia.py",      title="Copiloto IA",     icon="🤖"),
+])
+pg.run()

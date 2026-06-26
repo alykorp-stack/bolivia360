@@ -44,3 +44,6 @@ def show():
     ).add_to(m)
 
     st_folium(m, width=700, height=400)
+
+
+show()

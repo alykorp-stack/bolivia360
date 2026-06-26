@@ -44,3 +44,6 @@ def show():
 
         st.json(report)
 
+
+show()
+

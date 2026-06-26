@@ -6,3 +6,4 @@ folium
 streamlit-folium
 pillow
 firebase-admin
+streamlit

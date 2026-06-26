@@ -33,3 +33,6 @@ def show():
         summary = generate_my_day(user_profile, tasks, relevant_reports)
         st.subheader("🤖 Resumen IA")
         st.write(summary)
+
+
+show()

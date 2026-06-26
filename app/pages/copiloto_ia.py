@@ -32,3 +32,6 @@ def show():
             st.success("Tarea agregada a Mi Día.")
         else:
             st.info(result.get("recommendation", "La IA procesó tu solicitud."))
+
+
+show()
