@@ -1,6 +1,6 @@
 # Bolivia 360
 
-Tu guía inteligente para explorar Bolivia, construida con Streamlit y Claude AI.
+Hacer Bolivia predecible
 
 ## Estructura
 
@@ -36,26 +36,10 @@ bolivia360/
 4. Copia la configuración: copia `config.example.py` a `config.py` y llena tus credenciales
 5. Alternativamente, crea un archivo `.env` con las variables de entorno
 
-## Variables de entorno
-
-| Variable | Descripción |
-|---|---|
-| `ANTHROPIC_API_KEY` | API key de Anthropic (Claude) |
-| `SUPABASE_URL` | URL de tu proyecto Supabase |
-| `SUPABASE_KEY` | Anon key de Supabase |
-| `APP_ENV` | `development` (usa mock data) o `production` |
-
-## Ejecutar la app
-
-```bash
-streamlit run app/main.py
-```
-
-En modo `development` (por defecto), la app usa datos mock sin necesidad de Supabase.
 
 ## Tecnologias
 
 - **Frontend**: Streamlit
-- **IA**: Anthropic Claude (claude-sonnet-4-6)
-- **Base de datos**: Supabase (PostgreSQL)
+- **IA**: Gemini API
+- **Base de datos**: Supabase 
 - **Landing**: HTML + CSS vanilla
